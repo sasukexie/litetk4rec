@@ -1,0 +1,23 @@
+n_heads choice [2,4,8,16]
+n_layers choice [2,4,8]
+hidden_size choice [64,128]
+inner_size choice [256,512]
+
+hidden_dropout_prob choice [0.1,0.3,0.4,0.5,0.6,0.7]
+attn_dropout_prob choice [0.1,0.3,0.4,0.5,0.6,0.7]
+item_dropout_rate choice [0.0,0.1,0.2,0.3]
+label_smoothing choice [0.0,0.1,0.15,0.2]
+
+d_state choice [8,16,24,32,48]
+d_conv choice [2,4,6,8,16,24]
+expand choice [1,2,4,6,10]
+
+use_periodic_encoder choice [True,False]
+use_temporal_encoder choice [True,False]
+
+use_cl choice [True,False]
+cl_weight choice [0.05,0.1,0.2]
+cl_temperature choice [0.1,0.2,0.5,1.0]
+cl_mask_ratio choice [0.1,0.2,0.3]
+
+use_cosine_similarity choice [True,False]

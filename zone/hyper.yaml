@@ -1,0 +1,6 @@
+epochs: 50
+train_batch_size: 1024
+eval_batch_size: 512
+stopping_step: 10
+learning_rate: 0.001
+idx: 2 # 标记序号，不同数字则创建不同目录保存预处理数据集

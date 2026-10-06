@@ -1,0 +1,21 @@
+# MoCo4SRec（动量对比学习序列推荐，ESWA 2023）默认配置
+# 骨架部分与 LiteTK4Rec.yaml 一致，保证公平对比
+n_layers: 2
+n_heads: 2
+hidden_size: 64
+inner_size: 256
+hidden_dropout_prob: 0.5
+attn_dropout_prob: 0.5
+hidden_act: 'gelu'
+layer_norm_eps: 1e-12
+initializer_range: 0.02
+loss_type: 'CE'
+
+# --- MoCo 机制 ---
+moco_dim: 128         # 投影头维度
+queue_size: 4096      # 负样本队列大小（原文 65536，可按显存调整）
+moco_momentum: 0.999  # 动量系数
+ssl_temperature: 0.07 # 对比温度
+moco_phi: 0.0         # 假负样本过滤阈值（0=不过滤）
+ssl_weight: 0.1       # 对比损失权重
+moco_aug: 'reorder'   # 增强方式：crop / mask / reorder

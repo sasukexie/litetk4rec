@@ -1,0 +1,18 @@
+# EulerFormer（欧拉编码序列推荐）默认配置
+# 与 LiteTK4Rec.yaml 骨架部分保持一致, 便于公平对比
+n_layers: 2
+n_heads: 2
+hidden_size: 64
+inner_size: 256
+hidden_dropout_prob: 0.5
+attn_dropout_prob: 0.5
+hidden_act: 'gelu'
+layer_norm_eps: 1e-12
+initializer_range: 0.02
+loss_type: 'CE'
+
+# --- EulerFormer 特有 ---
+euler_bias: True
+init_factor: 1.0
+tep: 1.0
+lamb: 1e-5
